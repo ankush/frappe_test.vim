@@ -6,6 +6,9 @@ A custom runner for https://github.com/vim-test/vim-test
 
 ## Current features:
 
+![testing in action](https://user-images.githubusercontent.com/9079960/116586712-62c05780-a937-11eb-831f-650c52c07a0e.gif)
+
+
 1. Run current test file
 2. Run single unit test "near" cursor (through vim-test api)
 
