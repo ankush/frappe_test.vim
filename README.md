@@ -1,40 +1,49 @@
-# frappe_test.vim
-
-frappe_test: Running frappe unit tests with single click
-
-A custom runner for https://github.com/vim-test/vim-test
+# frappe_test.vim - A custom runner for vim-test plugin
 
 ## Current features:
 
 ![testing in action](https://user-images.githubusercontent.com/9079960/116586712-62c05780-a937-11eb-831f-650c52c07a0e.gif)
 
-
 1. Run current test file
-2. Run single unit test "near" cursor (through vim-test api)
+2. Run single unit test "near" cursor (through vim-test API)
+
 
 ## Setup / requirements
 
-- required plugins:
-    * [vim-test](https://github.com/vim-test/vim-test) to actually run the tests
-    * [vim-rooter](https://github.com/airblade/vim-rooter) to switch to correct root directory.
-- Config:
-    * copy `frappe.vim` to your `<VIM ROOT>/autoload/test/python/frappe.vim`
-    * You need to configure both plugins mentioned above to your preference. E.g. key binds, test running strategy etc.
-    * Following is minimal recommended plugin config.
+### Required plugins:
 
-    ```vim
-    let g:rooter_patterns = ['.git', 'package.json']
+* [vim-test](https://github.com/vim-test/vim-test) to actually run the tests
+* [vim-rooter](https://github.com/airblade/vim-rooter) to switch to correct root directory.
 
-    let test#custom_runners = {'python': ['Frappe']}
-    let test#enabled_runners = ["python#frappe"]
+### Installation
 
-    let g:test#python#frappe#testsite = "sitename"  " important to specify your test site name here
-    ```
--  Running
-    * This is totally up to you, you can use `:TestNearest` or `:TestFile` command or bind them to a keychord.
+Add this to your vimrc and do `:PlugInstall`. Other package managers _should_ work too.
+
+```vim
+Plug 'airblade/vim-rooter'
+Plug 'vim-test/vim-test'
+Plug 'ankush/frappe_test.vim'
+```
+
+###  Config:
+
+Following is minimal recommended config. You may configure it to your preference, refer vim-test documentation for more.
+
+```vim
+let g:rooter_patterns = ['.git', 'package.json']
+
+let test#custom_runners = {'python': ['Frappe']}
+let test#enabled_runners = ["python#frappe"]
+
+let g:test#python#frappe#testsite = "sitename"  " important to specify your test site name here
+```
+
+###  Running
+
+* This is totally up to you, you can use `:TestNearest` or `:TestFile` command or bind them to a keychord.
+* I prefer binding `<leader>t{n|f}` for near and file.
 
 
-## TODO / good to have features:
-1. make this installable with package manager.
+---
 
 License: same as Vim `:h license`
