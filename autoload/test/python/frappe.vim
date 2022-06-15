@@ -17,7 +17,8 @@ endfunction
 function! test#python#frappe#build_position(type, position) abort
   let path = s:get_import_path(a:position['file'])
   let sitename = g:test#python#frappe#testsite
-  let module_cmd = '--site ' . sitename . ' run-tests --module ' . path
+  let arguments = get(g:, "test#python#frappe#arguments", "")
+  let module_cmd = '--site ' . sitename . ' run-tests '. arguments . ' --module ' . path
 
   if a:type ==# 'nearest'
     let name = s:nearest_test(a:position)
