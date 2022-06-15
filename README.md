@@ -36,6 +36,7 @@ let test#custom_runners = {'python': ['Frappe']}
 let test#enabled_runners = ["python#frappe"]
 
 let g:test#python#frappe#testsite = "sitename"  " important to specify your test site name here
+let g:test#python#frappe#arguments = "--skip-before-tests"  " arguments to run-test function
 ```
 
 ###  Running
