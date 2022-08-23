@@ -2,7 +2,7 @@
 
 ## Current features:
 
-![testing in action](https://user-images.githubusercontent.com/9079960/116586712-62c05780-a937-11eb-831f-650c52c07a0e.gif)
+![testing in action](https://user-images.githubusercontent.com/9079960/186141063-3aebe183-cf3b-458f-9ef0-88d554e2befd.gif)
 
 1. Run current test file
 2. Run single unit test "near" cursor (through vim-test API)
