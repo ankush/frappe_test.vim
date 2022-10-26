@@ -45,6 +45,10 @@ let g:test#python#frappe#arguments = "--skip-before-tests"  " arguments to run-t
 * I prefer binding `<leader>t{n|f}` for near and file.
 
 
+### VS Code user?
+
+Try VS Code plugin: https://marketplace.visualstudio.com/items?itemName=AnkushMenat.frappe-test-runner 
+
 ---
 
 License: same as Vim `:h license`
